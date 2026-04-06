@@ -11,7 +11,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Kriv AI Inc.",
     role: "Founder & CEO",
-    period: "May 2025 — Present",
+    period: "Present",
     current: true,
     description: "AI consulting firm purpose-built for regulated industries — healthcare, life sciences, insurance, and finance.",
     highlights: [
@@ -25,7 +25,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Alankrat Productions",
     role: "Founder & Managing Director",
-    period: "April 2020 — April 2025",
+    period: "5 years",
     description: "Built and scaled a 15-person digital services agency serving 500+ clients across 4 verticals.",
     highlights: [
       "Managed end-to-end operations: client delivery, team hiring, P&L, vendor relationships",
@@ -37,7 +37,7 @@ export const experience: ExperienceItem[] = [
   {
     company: "Independent Consultant",
     role: "AI & Cloud Consultant",
-    period: "Jan 2024 — May 2025",
+    period: "Prior",
     description: "Delivered AI strategy, cloud architecture, and workflow automation for healthcare organizations and mid-market CTOs.",
     highlights: [
       "AI readiness evaluations for healthcare organizations",
