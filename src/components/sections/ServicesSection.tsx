@@ -50,10 +50,10 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <SectionWrapper id="services">
+    <SectionWrapper id="services" className="section-alt">
       <div className="text-center mb-14">
         <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">How I Help</p>
-        <h2 className="text-display mb-4">From AI Uncertainty to Governed Production</h2>
+        <h2 className="text-display font-serif mb-4">From AI Uncertainty to Governed Production</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Every engagement starts with your specific challenge. No cookie-cutter solutions — just production-grade AI that passes compliance.
         </p>

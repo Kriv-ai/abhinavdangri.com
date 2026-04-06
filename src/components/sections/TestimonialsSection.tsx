@@ -8,7 +8,7 @@ export function TestimonialsSection() {
     <SectionWrapper id="testimonials">
       <div className="text-center mb-14">
         <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">Client Results</p>
-        <h2 className="text-display mb-4">What Leaders Say</h2>
+        <h2 className="text-display font-serif mb-4">What Leaders Say</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Trusted by CIOs, CTOs, and operations leaders across healthcare and regulated industries.
         </p>

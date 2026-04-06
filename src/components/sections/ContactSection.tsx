@@ -11,7 +11,7 @@ export function ContactSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">Let's Talk</p>
-          <h2 className="text-display mb-4">Ready to Move Your AI Forward?</h2>
+          <h2 className="text-display font-serif mb-4">Ready to Move Your AI Forward?</h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
             Whether you're starting your AI journey or rescuing a stalled pilot, let's discuss how to get you to production.
           </p>
@@ -22,7 +22,7 @@ export function ContactSection() {
           <Card className="border-accent/30 bg-accent/5">
             <CardContent className="p-8 space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-2">Book a Free Strategy Call</h3>
+                <h3 className="text-xl font-bold font-serif mb-2">Book a Free Strategy Call</h3>
                 <p className="text-muted-foreground text-sm">
                   30 minutes. No pitch. We'll discuss your AI challenges and whether I can help.
                 </p>
@@ -58,7 +58,7 @@ export function ContactSection() {
           {/* Right: Direct contact */}
           <Card>
             <CardContent className="p-8 space-y-6">
-              <h3 className="text-xl font-bold">Or Reach Out Directly</h3>
+              <h3 className="text-xl font-bold font-serif">Or Reach Out Directly</h3>
 
               <div className="space-y-5">
                 <a href={`mailto:${profile.email}`} className="flex items-start gap-4 group">

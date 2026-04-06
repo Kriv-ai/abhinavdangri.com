@@ -34,10 +34,10 @@ const content = [
 
 export function ThoughtLeadershipSection() {
   return (
-    <SectionWrapper id="insights">
+    <SectionWrapper id="insights" className="section-alt">
       <div className="text-center mb-14">
         <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">Insights</p>
-        <h2 className="text-display mb-4">Thought Leadership</h2>
+        <h2 className="text-display font-serif mb-4">Thought Leadership</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           I share what I learn from deploying AI in regulated industries — the wins, the failures, and the frameworks that work.
         </p>

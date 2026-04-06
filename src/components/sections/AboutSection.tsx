@@ -19,7 +19,7 @@ export function AboutSection() {
           {/* Left: Story */}
           <div className="lg:col-span-3 space-y-5">
             <p className="text-sm font-semibold text-accent uppercase tracking-wider">My Story</p>
-            <h2 className="text-display">Why I Focus on Governed AI</h2>
+            <h2 className="text-display font-serif">Why I Focus on Governed AI</h2>
 
             {profile.bio.map((paragraph, i) => (
               <p key={i} className="text-muted-foreground leading-relaxed">

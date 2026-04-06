@@ -36,7 +36,9 @@
       "Bash(curl -sI \"https://thankful-hill-0f2134e0f.2.azurestaticapps.net\")",
       "Bash(curl -sk \"https://thankful-hill-0f2134e0f.2.azurestaticapps.net\")",
       "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run view 24015363112 --repo Kriv-ai/abhinavdangri.com --log)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run list --repo Kriv-ai/abhinavdangri.com --limit 2)",
+      "Read(//tmp/**)"
     ]
   }
 }

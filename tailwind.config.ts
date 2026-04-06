@@ -126,7 +126,8 @@ export default {
         "gradient-shift": "gradient-shift 8s ease infinite",
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        sans: ['"Inter"', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        serif: ['"Lora"', "Georgia", '"Times New Roman"', "serif"],
         mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular", "monospace"],
       },
       fontSize: {
@@ -145,13 +146,11 @@ export default {
           "radial-gradient(at 40% 20%, hsl(var(--primary) / 0.2) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(280 100% 65% / 0.15) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(var(--accent) / 0.1) 0px, transparent 50%)",
       },
       boxShadow: {
-        "glow-sm": "0 2px 8px hsl(var(--primary) / 0.2)",
-        glow: "0 4px 16px hsl(var(--primary) / 0.3)",
-        "glow-lg": "0 8px 32px hsl(var(--primary) / 0.4)",
-        "glow-xl": "0 16px 48px hsl(var(--primary) / 0.5)",
-        soft: "0 2px 8px hsl(0 0% 0% / 0.08)",
-        "soft-lg": "0 8px 24px hsl(0 0% 0% / 0.12)",
-        "inner-glow": "inset 0 0 20px hsl(var(--primary) / 0.1)",
+        subtle: "0 1px 3px hsl(0 0% 0% / 0.06)",
+        soft: "0 2px 8px hsl(0 0% 0% / 0.06)",
+        "soft-lg": "0 4px 16px hsl(0 0% 0% / 0.08)",
+        card: "0 1px 3px hsl(0 0% 0% / 0.04), 0 1px 2px hsl(0 0% 0% / 0.06)",
+        "card-hover": "0 8px 24px hsl(0 0% 0% / 0.08)",
       },
       blur: {
         "4xl": "72px",
