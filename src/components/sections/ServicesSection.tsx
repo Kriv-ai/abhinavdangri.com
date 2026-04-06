@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 const services = [
   {
     title: "AI Strategy & Readiness Assessment",
-    description: "I evaluate your data infrastructure, compliance posture, and organizational readiness — then deliver an honest assessment with a prioritized 90-day roadmap. Engagements start at $15K."
+    description: "I evaluate your data infrastructure, compliance posture, and organizational readiness — then deliver an honest assessment with a prioritized 90-day roadmap. Deliverables: AI readiness scorecard, data governance gap analysis, compliance risk assessment, and 90-day action plan. Typically 2–3 weeks. Engagements start at $15K."
   },
   {
     title: "Governed AI Implementation",
@@ -31,6 +31,13 @@ export function ServicesSection() {
         <p className="text-muted-foreground mb-10">
           Every engagement is structured around your specific challenge. No cookie-cutter deliverables.
         </p>
+
+        <div className="bg-primary/[0.03] border border-border/60 rounded-xl p-6 mb-12">
+          <h3 className="text-lg font-serif font-bold text-foreground mb-2">The 90-Day AI Governance Sprint</h3>
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            My structured approach to taking healthcare AI from pilot to governed production. Four phases — Discovery, Architecture, Deployment, Scale — each with clear deliverables, compliance checkpoints, and a defined timeline. No open-ended engagements.
+          </p>
+        </div>
 
         <div className="space-y-8">
           {services.map((service, i) => (

@@ -12,7 +12,7 @@ export function SectionWrapper({ id, children, className, containerClassName }: 
   const { ref, isInView } = useInView();
 
   return (
-    <section id={id} className={cn("py-20 md:py-28", className)}>
+    <section id={id} className={cn("py-24 md:py-32", className)}>
       <div
         ref={ref}
         className={cn(

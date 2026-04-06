@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
   { id: "problem", label: "Why" },
@@ -37,12 +38,7 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-xl font-bold font-serif text-primary"
-        >
-          AD
-        </button>
+        <Link to="/" className="text-xl font-bold font-serif text-primary">AD</Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
@@ -60,6 +56,9 @@ export function Navbar() {
               {item.label}
             </button>
           ))}
+          <Link to="/blog" className="px-4 py-2 text-sm font-medium rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all">
+            Blog
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -92,6 +91,9 @@ export function Navbar() {
                 {item.label}
               </button>
             ))}
+              <Link to="/blog" className="px-4 py-3 text-sm font-medium rounded-lg text-left text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all">
+                Blog
+              </Link>
           </div>
         </div>
       )}

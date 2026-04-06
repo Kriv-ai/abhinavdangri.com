@@ -51,6 +51,14 @@ export function HeroSection() {
             <span>50+ certifications</span>
             <span>NYU Computer Engineering</span>
           </div>
+
+          {/* Partner logos */}
+          <div className="flex flex-wrap items-center gap-6 pt-6 text-muted-foreground/60">
+            <span className="text-xs uppercase tracking-wider text-muted-foreground/40">Trusted by</span>
+            <span className="text-sm font-semibold">Databricks</span>
+            <span className="text-sm font-semibold">Microsoft Azure</span>
+            <span className="text-sm font-semibold">NYU</span>
+          </div>
         </div>
       </div>
     </section>

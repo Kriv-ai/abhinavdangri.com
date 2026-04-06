@@ -64,6 +64,17 @@ export function CaseStudiesSection() {
               — VP of Technology, Regional Insurance Carrier
             </footer>
           </blockquote>
+
+          {/* CTA */}
+          <div className="pt-8 border-t border-border">
+            <p className="text-foreground font-serif font-medium mb-4">Facing a similar challenge?</p>
+            <button
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm transition-colors"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Book a Strategy Call →
+            </button>
+          </div>
         </div>
       </div>
     </SectionWrapper>
