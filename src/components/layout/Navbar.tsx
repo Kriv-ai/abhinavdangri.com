@@ -5,11 +5,11 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
+  { id: "problem", label: "Why" },
+  { id: "case-studies", label: "Results" },
   { id: "services", label: "Services" },
-  { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
+  { id: "about", label: "About" },
+  { id: "insights", label: "Insights" },
   { id: "contact", label: "Contact" },
 ];
 

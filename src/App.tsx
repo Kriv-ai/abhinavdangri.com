@@ -1,12 +1,14 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { SocialProofSection } from "@/components/sections/SocialProofSection";
+import { ProblemSection } from "@/components/sections/ProblemSection";
+import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
-import { SkillsSection } from "@/components/sections/SkillsSection";
-import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { ThoughtLeadershipSection } from "@/components/sections/ThoughtLeadershipSection";
+import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 function App() {
@@ -15,12 +17,14 @@ function App() {
       <Navbar />
       <main>
         <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
+        <SocialProofSection />
+        <ProblemSection />
+        <CaseStudiesSection />
         <ServicesSection />
-        <SkillsSection />
-        <ProjectsSection />
+        <TestimonialsSection />
+        <AboutSection />
         <ThoughtLeadershipSection />
+        <SkillsSection />
         <ContactSection />
       </main>
       <Footer />

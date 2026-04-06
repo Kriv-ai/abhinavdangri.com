@@ -1,7 +1,7 @@
 import { profile } from "@/data/profile";
 import { Button } from "@/components/ui/button";
-import { Mail, ChevronDown, ArrowRight } from "lucide-react";
-import { LinkedinIcon, YoutubeIcon } from "@/components/ui/icons";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { LinkedinIcon } from "@/components/ui/icons";
 
 export function HeroSection() {
   const scrollTo = (id: string) => {
@@ -9,68 +9,75 @@ export function HeroSection() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 gradient-hero" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-5xl animate-pulse-soft" />
-      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent/15 rounded-full blur-5xl animate-pulse-soft" style={{ animationDelay: "1.5s" }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-5xl animate-float" />
+    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 text-sm text-primary animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            Available for strategic engagements
+      <div className="relative z-10 container mx-auto px-4 md:px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Content */}
+          <div className="space-y-6 max-w-xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              {profile.title}
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-display-lg font-bold tracking-tight text-foreground leading-tight">
+              {profile.headline}
+            </h1>
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {profile.subheadline}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg" onClick={() => scrollTo("contact")}>
+                Book a 30-Min Strategy Call <ArrowRight size={16} />
+              </Button>
+              <Button size="lg" variant="outline" onClick={() => scrollTo("case-studies")}>
+                View Case Studies
+              </Button>
+            </div>
+
+            {/* Trust strip */}
+            <div className="flex items-center gap-6 pt-4 text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground">16+</span> AI Solutions
+              <span className="text-border">|</span>
+              <span className="font-semibold text-foreground">50+</span> Certifications
+              <span className="text-border">|</span>
+              <span className="font-semibold text-foreground">Databricks</span> Partner
+            </div>
           </div>
 
-          {/* Name */}
-          <h1 className="text-display-lg md:text-display-xl gradient-text animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            {profile.name}
-          </h1>
-
-          {/* Title */}
-          <p className="text-xl md:text-2xl text-muted-foreground font-medium animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            {profile.title}
-          </p>
-
-          {/* Tagline */}
-          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            {profile.tagline}
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button size="lg" onClick={() => scrollTo("projects")}>
-              View My Work <ArrowRight size={18} />
-            </Button>
-            <Button size="lg" variant="outline" onClick={() => scrollTo("contact")}>
-              Get in Touch
-            </Button>
-          </div>
-
-          {/* Social links */}
-          <div className="flex items-center justify-center gap-5 pt-4 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
-              <LinkedinIcon size={22} />
-            </a>
-            <a href={`mailto:${profile.email}`} className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
-              <Mail size={22} />
-            </a>
-            <a href={profile.youtube} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="YouTube">
-              <YoutubeIcon size={22} />
-            </a>
+          {/* Right: Photo placeholder */}
+          <div className="hidden lg:flex justify-center">
+            <div className="relative">
+              <div className="w-80 h-96 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-border/50 flex flex-col items-center justify-center text-center p-8">
+                <div className="w-32 h-32 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+                  <span className="text-5xl font-bold text-primary">AD</span>
+                </div>
+                <p className="text-lg font-semibold text-foreground">{profile.name}</p>
+                <p className="text-sm text-muted-foreground mt-1">{profile.title}</p>
+                <div className="flex items-center gap-3 mt-4">
+                  <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    <LinkedinIcon size={18} />
+                  </a>
+                </div>
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/10 rounded-2xl -z-10" />
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-primary/10 rounded-2xl -z-10" />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <button
-        onClick={() => scrollTo("about")}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-float"
+        onClick={() => scrollTo("problem")}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-float"
         aria-label="Scroll down"
       >
-        <ChevronDown size={28} />
+        <ChevronDown size={24} />
       </button>
     </section>
   );

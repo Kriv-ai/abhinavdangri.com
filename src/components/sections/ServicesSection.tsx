@@ -1,71 +1,83 @@
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Brain, Shield, Cloud, Workflow, BarChart3, Users, ExternalLink } from "lucide-react";
+import { Brain, Shield, Cloud, Workflow, BarChart3, Users, ArrowRight } from "lucide-react";
 
 const services = [
   {
     icon: Brain,
     title: "AI Strategy & Readiness",
-    description: "AI readiness assessments, governance gap analysis, and strategic roadmaps for organizations entering the AI space."
+    problem: "Unsure if your organization is ready for AI?",
+    outcome: "Get a clear roadmap with an AI readiness assessment, governance gap analysis, and 90-day action plan.",
+    typical: "Engagements from $15K"
   },
   {
     icon: Workflow,
     title: "Agentic AI Implementation",
-    description: "End-to-end agentic AI platforms with human-in-the-loop safeguards, from pilot to production in 90 days."
+    problem: "AI pilot stuck in the lab?",
+    outcome: "Go from pilot to governed production in 90 days with human-in-the-loop safeguards and compliance built in.",
+    typical: "Engagements from $50K"
   },
   {
     icon: Shield,
     title: "AI Governance & Compliance",
-    description: "HIPAA-compliant AI frameworks, EU AI Act compliance programs, and Governance-as-a-Service (GaaS)."
+    problem: "Board won't approve AI due to regulatory risk?",
+    outcome: "HIPAA-compliant AI framework, EU AI Act readiness, and Governance-as-a-Service that satisfies auditors.",
+    typical: "Engagements from $50K"
   },
   {
     icon: Cloud,
     title: "Cloud & Data Platforms",
-    description: "Databricks, Azure, and AWS implementations — data lakehouses, MLOps pipelines, and multi-cloud architectures."
+    problem: "Data scattered across systems with no governance?",
+    outcome: "Databricks/Azure data lakehouse with Unity Catalog, governed pipelines, and analytics-ready infrastructure.",
+    typical: "Engagements from $75K"
   },
   {
     icon: BarChart3,
     title: "MLOps & Monitoring",
-    description: "Regulated CI/CD pipelines, model monitoring, drift detection, bias auditing, and explainability dashboards."
+    problem: "Models drifting in production with no visibility?",
+    outcome: "Regulated CI/CD pipelines with model monitoring, drift detection, bias auditing, and explainability dashboards.",
+    typical: "Included in implementation"
   },
   {
     icon: Users,
-    title: "Fractional CTO/CIO",
-    description: "Strategic technology leadership for organizations that need senior AI expertise without full-time overhead."
+    title: "Fractional CTO / CIO",
+    problem: "Need senior AI leadership without full-time overhead?",
+    outcome: "Strategic technology guidance, team mentoring, and vendor evaluation from an experienced AI leader.",
+    typical: "From $8K/month"
   }
 ];
 
 export function ServicesSection() {
   return (
     <SectionWrapper id="services">
-      <div className="text-center mb-16">
-        <h2 className="text-display mb-4">What I Do</h2>
+      <div className="text-center mb-14">
+        <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">How I Help</p>
+        <h2 className="text-display mb-4">From AI Uncertainty to Governed Production</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Through Kriv AI, I help healthcare and regulated industry organizations deploy AI that passes compliance from day one.
+          Every engagement starts with your specific challenge. No cookie-cutter solutions — just production-grade AI that passes compliance.
         </p>
-        <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4" />
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {services.map((service, i) => (
-          <Card key={i} className="hover-lift group">
-            <CardContent className="p-6 space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+          <Card key={i} className="hover-lift border-border/50 group">
+            <CardContent className="p-7 space-y-4">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
                 <service.icon size={24} className="text-primary" />
               </div>
-              <h3 className="text-lg font-semibold">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+              <h3 className="text-lg font-bold">{service.title}</h3>
+              <p className="text-sm text-accent font-medium italic">{service.problem}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{service.outcome}</p>
+              <p className="text-xs text-muted-foreground pt-2 border-t border-border">{service.typical}</p>
             </CardContent>
           </Card>
         ))}
       </div>
 
-      <div className="text-center mt-12">
-        <Button variant="outline" size="lg" asChild>
-          <a href="https://kriv.ai" target="_blank" rel="noopener noreferrer">
-            Learn more at Kriv AI <ExternalLink size={16} />
-          </a>
+      <div className="text-center mt-10">
+        <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+          Discuss Your Challenge <ArrowRight size={16} />
         </Button>
       </div>
     </SectionWrapper>

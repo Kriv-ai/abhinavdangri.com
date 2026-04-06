@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(mkdir -p src/lib src/data src/hooks src/components/ui src/components/layout src/components/sections)",
+      "Bash(rm -f src/App.css src/assets/react.svg src/assets/vite.svg src/assets/hero.png)",
+      "Bash(npm run:*)",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.toLowerCase\\(\\).includes\\('linked'\\) || k.toLowerCase\\(\\).includes\\('youtube'\\)\\).join\\(', '\\)\\)\")",
+      "Bash(node -e \"import\\('lucide-react'\\).then\\(m => { const keys = Object.keys\\(m\\); console.log\\(keys.filter\\(k => /link|tube/i.test\\(k\\)\\).join\\(', '\\)\\); }\\)\")",
+      "Bash(gh auth:*)",
+      "Bash(where gh:*)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/abhin/AppData/Local/Programs//**)",
+      "Bash(winget install:*)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth status)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" repo create Kriv-ai/abhinavdangri.com --public --description \"Personal professional website for Abhinav Dangri — Founder & CEO of Kriv AI\")",
+      "Bash(curl -s -X POST https://git.kriv.ai/api/v1/user/repos -H 'Content-Type: application/json' -d '{\"name\":\"abhinavdangri.com\",\"description\":\"Personal professional website for Abhinav Dangri\",\"private\":false,\"auto_init\":false}' --negotiate -u :)",
+      "Bash(curl -s -X POST https://git.kriv.ai/api/v1/user/repos -H 'Content-Type: application/json' -d '{\"name\":\"abhinavdangri.com\",\"description\":\"Personal professional website for Abhinav Dangri\",\"private\":false,\"auto_init\":false}')",
+      "Bash(curl -sk -X POST https://git.kriv.ai/api/v1/user/repos -H 'Content-Type: application/json' -H 'Authorization: token 5e14a580c5452cf32a950ef476a809dba8d75713' -d '{\"name\":\"abhinavdangri.com\",\"description\":\"Personal professional website for Abhinav Dangri\",\"private\":false,\"auto_init\":false}')",
+      "Bash(az --version)",
+      "Bash(az account:*)",
+      "Bash(az staticwebapp:*)",
+      "Bash(az group:*)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" secret list --repo Kriv-ai/abhinavdangri.com)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run list --repo Kriv-ai/abhinavdangri.com --limit 5)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run view 24015280571 --repo Kriv-ai/abhinavdangri.com --log-failed)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run list --repo Kriv-ai/abhinavdangri.com --limit 3)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run view 24015363112 --repo Kriv-ai/abhinavdangri.com)",
+      "Bash(az network:*)",
+      "Bash(nslookup www.abhinavdangri.com ns1-09.azure-dns.com)",
+      "Bash(nslookup www.abhinavdangri.com 8.8.8.8)",
+      "Bash(curl -s \"https://api.namecheap.com/xml.response?ApiUser=KrivAIINC&ApiKey=13f10a1610dc4c7fae7b0464ec6d933b&UserName=KrivAIINC&ClientIp=74.102.40.114&Command=namecheap.domains.getList\")",
+      "Bash(curl -sk \"https://api.namecheap.com/xml.response?ApiUser=KrivAIINC&ApiKey=13f10a1610dc4c7fae7b0464ec6d933b&UserName=KrivAIINC&ClientIp=74.102.40.114&Command=namecheap.domains.getList\")",
+      "Bash(curl -sI \"https://thankful-hill-0f2134e0f.2.azurestaticapps.net\")",
+      "Bash(curl -sk \"https://thankful-hill-0f2134e0f.2.azurestaticapps.net\")",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" run view 24015363112 --repo Kriv-ai/abhinavdangri.com --log)",
+      "WebSearch"
+    ]
+  }
+}

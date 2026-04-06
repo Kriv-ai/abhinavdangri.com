@@ -7,67 +7,65 @@ import { LinkedinIcon } from "@/components/ui/icons";
 
 const content = [
   {
-    type: "Article",
+    type: "Featured Article",
     icon: FileText,
-    title: "Why 79% of Healthcare AI Pilots Never Reach Production — And What CIOs Should Do Instead",
-    description: "Analyzing the three critical gaps that prevent healthcare AI from reaching production, with a framework for AI readiness assessment.",
+    title: "Why 79% of Healthcare AI Pilots Never Reach Production",
+    description: "An analysis of the three critical gaps preventing healthcare AI from reaching production, with an actionable framework for CIOs.",
     tags: ["Healthcare AI", "Governance", "CIO Strategy"],
+    cta: "Read the Article"
   },
   {
     type: "Speaking",
     icon: Mic,
-    title: "Conference Speaking & Industry Events",
-    description: "Speaking on AI governance, HIPAA-compliant AI deployments, and the future of regulated AI at industry conferences including HIMSS and ViVE.",
+    title: "Conference Speaking",
+    description: "Speaking on AI governance, HIPAA-compliant deployments, and the future of regulated AI at HIMSS, ViVE, and industry events.",
     tags: ["HIMSS", "ViVE", "AI Governance"],
+    cta: "Invite to Speak"
   },
   {
     type: "LinkedIn",
     icon: LinkedinIcon,
-    title: "Thought Leadership on LinkedIn",
-    description: "Regular insights on governed AI, healthcare technology, and building AI consulting practices. Sharing lessons learned from production deployments.",
-    tags: ["AI Strategy", "Healthcare", "Consulting"],
+    title: "Weekly AI Insights",
+    description: "Regular insights on governed AI, healthcare compliance, and lessons from production deployments. 2,000+ followers.",
+    tags: ["Weekly Posts", "AI Strategy", "Healthcare"],
+    cta: "Follow on LinkedIn"
   },
 ];
 
 export function ThoughtLeadershipSection() {
   return (
-    <SectionWrapper id="thought-leadership" className="gradient-mesh">
-      <div className="text-center mb-16">
+    <SectionWrapper id="insights">
+      <div className="text-center mb-14">
+        <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">Insights</p>
         <h2 className="text-display mb-4">Thought Leadership</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Sharing insights on governed AI, healthcare compliance, and building production-grade AI systems.
+          I share what I learn from deploying AI in regulated industries — the wins, the failures, and the frameworks that work.
         </p>
-        <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-4" />
       </div>
 
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {content.map((item, i) => (
-          <Card key={i} className="hover-lift">
-            <CardContent className="p-6 space-y-4">
+          <Card key={i} className="hover-lift border-border/50">
+            <CardContent className="p-7 space-y-4 flex flex-col h-full">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <item.icon size={20} className="text-primary" />
                 </div>
-                <Badge>{item.type}</Badge>
+                <Badge variant="secondary" className="text-xs">{item.type}</Badge>
               </div>
-              <h3 className="font-semibold leading-snug">{item.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              <h3 className="font-bold leading-snug">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{item.description}</p>
               <div className="flex flex-wrap gap-1.5">
                 {item.tags.map((tag) => (
-                  <Badge key={tag} variant="secondary" className="text-[10px]">{tag}</Badge>
+                  <Badge key={tag} variant="outline" className="text-[10px]">{tag}</Badge>
                 ))}
               </div>
+              <Button variant="ghost" size="sm" className="w-fit text-primary hover:text-primary/80 p-0 h-auto font-medium">
+                {item.cta} <ExternalLink size={12} className="ml-1" />
+              </Button>
             </CardContent>
           </Card>
         ))}
-      </div>
-
-      <div className="text-center mt-10">
-        <Button variant="outline" asChild>
-          <a href="https://linkedin.com/in/abhinavdangri" target="_blank" rel="noopener noreferrer">
-            Follow on LinkedIn <ExternalLink size={14} />
-          </a>
-        </Button>
       </div>
     </SectionWrapper>
   );
