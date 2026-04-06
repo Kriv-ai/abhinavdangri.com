@@ -2,6 +2,7 @@ import { profile } from "@/data/profile";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { LinkedinIcon } from "@/components/ui/icons";
+import headshot from "@/assets/headshot.png";
 
 export function HeroSection() {
   return (
@@ -9,10 +10,11 @@ export function HeroSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            {/* Photo placeholder */}
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-              <span className="text-xl font-bold font-serif text-primary">AD</span>
-            </div>
+            <img
+              src={headshot}
+              alt={profile.name}
+              className="w-16 h-16 rounded-full object-cover object-top border-2 border-border shrink-0"
+            />
             <div>
               <p className="font-serif font-bold text-lg text-foreground">{profile.name}</p>
               <p className="text-sm text-muted-foreground">{profile.title}</p>
